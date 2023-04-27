@@ -3,7 +3,8 @@ package main;
 import java.awt.Component;
 import java.util.Calendar;
 
-public class DatePanel extends javax.swing.JLayeredPane {
+
+public class DatePanel extends javax.swing.JPanel {
     
     private int month;
     private int year;
@@ -98,42 +99,25 @@ public class DatePanel extends javax.swing.JLayeredPane {
 
         setLayout(new java.awt.GridLayout(7, 7));
 
-        sun.setBackground(null);
-        sun.setForeground(new java.awt.Color(234, 89, 89));
+        sun.setForeground(new java.awt.Color(204, 5, 5));
         sun.setText("Sun");
-        sun.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sunActionPerformed(evt);
-            }
-        });
         add(sun);
 
-        mon.setBackground(new java.awt.Color(19, 140, 37));
         mon.setText("Mon");
         add(mon);
 
-        tue.setBackground(new java.awt.Color(19, 140, 37));
         tue.setText("Tue");
         add(tue);
 
-        wed.setBackground(new java.awt.Color(19, 140, 37));
         wed.setText("Wed");
         add(wed);
 
-        thu.setBackground(new java.awt.Color(19, 140, 37));
         thu.setText("Thu");
-        thu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                thuActionPerformed(evt);
-            }
-        });
         add(thu);
 
-        fri.setBackground(new java.awt.Color(19, 140, 37));
         fri.setText("Fri");
         add(fri);
 
-        sat.setBackground(new java.awt.Color(19, 140, 37));
         sat.setText("Sat");
         add(sat);
         add(cell8);
@@ -179,15 +163,6 @@ public class DatePanel extends javax.swing.JLayeredPane {
         add(cell48);
         add(cell49);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void sunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sunActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sunActionPerformed
-
-    private void thuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_thuActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_thuActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private main.Cell cell10;
