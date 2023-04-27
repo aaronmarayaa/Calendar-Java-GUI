@@ -2,7 +2,6 @@ package main;
 
 
 import java.awt.Color;
-import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JButton;
 
@@ -10,7 +9,6 @@ public class Cell extends JButton{
     
     private Date date;
     private boolean title;
-    Calendar calendar = Calendar.getInstance();
     
     public Cell(){
         setContentAreaFilled(false);
