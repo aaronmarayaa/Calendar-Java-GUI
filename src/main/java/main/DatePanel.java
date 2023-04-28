@@ -29,9 +29,9 @@ public class DatePanel extends javax.swing.JPanel {
     public void setDate(){
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
-        calendar.set(Calendar.MONTH, month - 1);  //  month jan as 0 so start from 0
+        calendar.set(Calendar.MONTH, month - 1);
         calendar.set(Calendar.DATE, 1);
-        int startDay = calendar.get(Calendar.DAY_OF_WEEK) - 1;  //  get day of week -1 to index
+        int startDay = calendar.get(Calendar.DAY_OF_WEEK) - 1;
         calendar.add(Calendar.DATE, -startDay);
         for (Component com : getComponents()) {
             Cell cell = (Cell) com;
@@ -39,7 +39,16 @@ public class DatePanel extends javax.swing.JPanel {
                 cell.setText(calendar.get(Calendar.DATE) + "");
                 cell.setDate(calendar.getTime());
                 cell.currentMonth(calendar.get(Calendar.MONTH) == month - 1);
-                calendar.add(Calendar.DATE, 1); //  up 1 day
+                calendar.add(Calendar.DATE, 1); 
+                
+                Calendar currentSystemDate = Calendar.getInstance();
+                if(calendar.get(Calendar.YEAR) == currentSystemDate.get(Calendar.YEAR) &&
+                    calendar.get(Calendar.MONTH) == currentSystemDate.get(Calendar.MONTH) &&
+                    calendar.get(Calendar.DATE) == currentSystemDate.get(Calendar.DATE) + 1){
+                    cell.setToday(true);
+                } else {
+                    cell.setToday(false);
+                }
             }
         }
     }
@@ -97,6 +106,7 @@ public class DatePanel extends javax.swing.JPanel {
         cell48 = new main.Cell();
         cell49 = new main.Cell();
 
+        setBackground(new java.awt.Color(68, 68, 68));
         setLayout(new java.awt.GridLayout(7, 7));
 
         sun.setForeground(new java.awt.Color(204, 5, 5));
