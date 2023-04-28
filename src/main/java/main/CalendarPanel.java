@@ -24,14 +24,18 @@ public class CalendarPanel extends javax.swing.JPanel {
         cmdPrev = new javax.swing.JButton();
         cmdNext = new javax.swing.JButton();
         displayDate = new main.DisplayDatePanel();
+        clock1 = new main.Clock();
 
         setBackground(new java.awt.Color(68, 68, 68));
+        setLayout(null);
 
         monthLabel.setBackground(new java.awt.Color(255, 255, 255));
         monthLabel.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        monthLabel.setForeground(new java.awt.Color(25, 70, 255));
+        monthLabel.setForeground(new java.awt.Color(153, 153, 153));
         monthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         monthLabel.setText("Month Year ");
+        add(monthLabel);
+        monthLabel.setBounds(450, 10, 330, 42);
 
         cmdPrev.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\prev.png")); // NOI18N
         cmdPrev.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -42,6 +46,8 @@ public class CalendarPanel extends javax.swing.JPanel {
                 cmdPrevActionPerformed(evt);
             }
         });
+        add(cmdPrev);
+        cmdPrev.setBounds(330, 10, 83, 42);
 
         cmdNext.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\arrow-right (1).png")); // NOI18N
         cmdNext.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -52,31 +58,12 @@ public class CalendarPanel extends javax.swing.JPanel {
                 cmdNextActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(cmdPrev, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(monthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(cmdNext, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addComponent(displayDate, javax.swing.GroupLayout.PREFERRED_SIZE, 545, javax.swing.GroupLayout.PREFERRED_SIZE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(monthLabel)
-                    .addComponent(cmdPrev, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cmdNext, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(displayDate, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        add(cmdNext);
+        cmdNext.setBounds(780, 10, 76, 42);
+        add(displayDate);
+        displayDate.setBounds(330, 60, 530, 280);
+        add(clock1);
+        clock1.setBounds(0, 0, 330, 340);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdNextActionPerformed
@@ -115,6 +102,7 @@ public class CalendarPanel extends javax.swing.JPanel {
         monthLabel.setText(currentMonth.format(calendar.getTime()));
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private main.Clock clock1;
     private javax.swing.JButton cmdNext;
     private javax.swing.JButton cmdPrev;
     private main.DisplayDatePanel displayDate;
