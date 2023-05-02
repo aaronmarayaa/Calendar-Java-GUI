@@ -40,7 +40,6 @@ public class Clock extends javax.swing.JPanel {
         time.setFont(new java.awt.Font("Bookman Old Style", 0, 48)); // NOI18N
         time.setForeground(new java.awt.Color(153, 153, 153));
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        time.setText("00:00:00 a");
 
         date.setFont(new java.awt.Font("Bookman Old Style", 0, 36)); // NOI18N
         date.setForeground(new java.awt.Color(153, 153, 153));
