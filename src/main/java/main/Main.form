@@ -41,17 +41,17 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="calendarPanel2" alignment="0" pref="854" max="32767" attributes="0"/>
+          <Component id="calendarPanel1" alignment="0" pref="854" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="calendarPanel2" alignment="0" pref="339" max="32767" attributes="0"/>
+          <Component id="calendarPanel1" alignment="0" pref="339" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="main.CalendarPanel" name="calendarPanel2">
+    <Component class="main.CalendarPanel" name="calendarPanel1">
     </Component>
   </SubComponents>
 </Form>
