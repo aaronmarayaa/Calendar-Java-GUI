@@ -6,8 +6,8 @@ import java.util.Calendar;
 
 public class DatePanel extends javax.swing.JPanel {
     
-    private int month;
-    private int year;
+    private final int month;
+    private final int year;
     
     public DatePanel(int month, int year) {
         this.month = month;
