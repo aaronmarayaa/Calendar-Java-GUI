@@ -1,58 +1,28 @@
 package main;
 
 import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ComponentAdapter;
-import java.awt.event.ComponentEvent;
-import javax.swing.Timer;
 
 public class DisplayDatePanel extends javax.swing.JPanel {
     
-    public DisplayDatePanel() {
-       initComponents();
-       setLayout(null);
-       addComponentListener(new ComponentAdapter() {
-            @Override
-            public void componentResized(ComponentEvent ce) {
-                comShow.setSize(getSize());
-                add(comShow);
-                comExit = comShow;
-                repaint();
-                revalidate();
-            }
-        });
-        timer = new Timer(0, (ActionEvent evt) -> {
-            animate();
-       });
-    }
-
-    private final Timer timer;
     private Component comExit;
     private Component comShow;
-
+    
+    public DisplayDatePanel() {
+       initComponents();
+    }
     public void show(Component com) {
-        if (!timer.isRunning()) {
-            this.comShow = com;
-            com.setSize(getSize());
-            if (getComponentCount() == 0) {
-                add(com);
-                comExit = com;
-                repaint();
-                revalidate();
-            } else {
-                comShow.setLocation(getWidth(), 0);
-                add(com);
-                repaint();
-                revalidate();
-                timer.start();
-            }
+        comShow = com;
+        if(getComponentCount() == 0) {
+            comShow.setSize(getSize());
+            add(comShow);
+            comExit = com;
+        } else {
+            comShow.setSize(getSize());
+            add(comShow);
+            removeSlide();
         }
     }
-
-    private void animate() {
-        comShow.setLocation(0, 0);
-        comExit.setLocation(getWidth(), 0);
-        timer.stop();
+    private void removeSlide(){
         remove(comExit);
         comExit = comShow;
     }
