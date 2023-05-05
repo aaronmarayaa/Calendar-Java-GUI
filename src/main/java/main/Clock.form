@@ -44,8 +44,8 @@
               <EmptySpace max="-2" attributes="0"/>
               <Component id="day" min="-2" pref="57" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="date" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="112" max="32767" attributes="0"/>
+              <Component id="date" min="-2" pref="61" max="-2" attributes="0"/>
+              <EmptySpace pref="94" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -60,6 +60,7 @@
           <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="00:00:00"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="date">
@@ -71,7 +72,6 @@
           <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="M d, yy"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="day">
@@ -83,7 +83,6 @@
           <Color blue="99" green="99" red="99" type="rgb"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="EEEE"/>
       </Properties>
     </Component>
   </SubComponents>

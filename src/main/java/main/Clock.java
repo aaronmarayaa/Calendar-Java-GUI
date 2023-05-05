@@ -14,12 +14,12 @@ public class Clock extends javax.swing.JPanel {
     public Clock() {
         initComponents();
         TIMER = new Timer(1000, e -> {
-           time.setText(TIME_FORMATTER.format(Calendar.getInstance().getTime())); 
+            time.setText(TIME_FORMATTER.format(Calendar.getInstance().getTime())); 
+            date.setText(DATE_FORMATTER.format(Calendar.getInstance().getTime()));
+            day.setText(DAY_FORMATTER.format(Calendar.getInstance().getTime()));
         });
+        TIMER.setInitialDelay(0);
         TIMER.start();
-        
-        date.setText(DATE_FORMATTER.format(Calendar.getInstance().getTime()));
-        day.setText(DAY_FORMATTER.format(Calendar.getInstance().getTime()));
     }
 
     /**
@@ -40,16 +40,15 @@ public class Clock extends javax.swing.JPanel {
         time.setFont(new java.awt.Font("Bookman Old Style", 0, 48)); // NOI18N
         time.setForeground(new java.awt.Color(153, 153, 153));
         time.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        time.setText("00:00:00");
 
         date.setFont(new java.awt.Font("Bookman Old Style", 0, 36)); // NOI18N
         date.setForeground(new java.awt.Color(153, 153, 153));
         date.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        date.setText("M d, yy");
 
         day.setFont(new java.awt.Font("Bookman Old Style", 0, 36)); // NOI18N
         day.setForeground(new java.awt.Color(153, 153, 153));
         day.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        day.setText("EEEE");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -74,8 +73,8 @@ public class Clock extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(day, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(date)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addComponent(date, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
