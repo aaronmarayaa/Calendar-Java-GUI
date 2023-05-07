@@ -1,6 +1,7 @@
 package main;
 
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -38,11 +39,16 @@ public class Cell extends JButton{
     }
     @Override
     protected void paintComponent(Graphics graphics){
+        Graphics2D horizontalLine = (Graphics2D)graphics;
+        horizontalLine.setColor(new Color(79, 79, 79));
+        horizontalLine.setStroke(new BasicStroke(0.1f));
+        horizontalLine.drawLine(0, getHeight() - 1, getWidth(), getHeight() - 1);
+                   
         if(isToday){
-            Graphics2D g2 = (Graphics2D)graphics;
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-            g2.setColor(new Color(25,70,255));
-            g2.fillRoundRect(25, 10, getWidth()-50, getHeight()-20, 50, 50);
+            Graphics2D dayMarking = (Graphics2D)graphics;
+            dayMarking.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            dayMarking.setColor(new Color(25,70,255));
+            dayMarking.fillRoundRect(25, 10, getWidth()-50, getHeight()-20, 50, 50);
         }
         super.paintComponent(graphics);
     }
