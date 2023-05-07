@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 
@@ -9,6 +10,8 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setIconImage();
+        getContentPane().setBackground(Color.BLUE);
+
     }
     
     private void setIconImage(){
@@ -72,7 +75,7 @@ public class Main extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new LoadingScreen().setVisible(true);
             }
         });
     }
