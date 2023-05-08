@@ -110,67 +110,165 @@ public class DatePanel extends javax.swing.JPanel {
         setLayout(new java.awt.GridLayout(7, 7));
 
         sun.setForeground(new java.awt.Color(204, 5, 5));
+        sun.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sun.setText("Sun");
+        sun.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(sun);
 
+        mon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         mon.setText("Mon");
+        mon.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(mon);
 
+        tue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         tue.setText("Tue");
+        tue.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(tue);
 
+        wed.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         wed.setText("Wed");
+        wed.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(wed);
 
+        thu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         thu.setText("Thu");
+        thu.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(thu);
 
+        fri.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         fri.setText("Fri");
+        fri.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(fri);
 
+        sat.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         sat.setText("Sat");
+        sat.setFont(new java.awt.Font("Yu Gothic UI", 0, 12)); // NOI18N
         add(sat);
+
+        cell8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell8);
+
+        cell9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell9);
+
+        cell10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell10);
+
+        cell11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell11);
+
+        cell12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell12);
+
+        cell13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell13);
+
+        cell14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell14);
+
+        cell15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell15);
+
+        cell16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell16);
+
+        cell17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell17);
+
+        cell18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell18);
+
+        cell19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell19);
+
+        cell20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell20);
+
+        cell21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell21);
+
+        cell22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell22);
+
+        cell23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell23);
+
+        cell24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell24);
+
+        cell25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell25);
+
+        cell26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell26);
+
+        cell27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell27);
+
+        cell28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell28);
+
+        cell29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell29);
+
+        cell30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell30);
+
+        cell31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell31);
+
+        cell32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell32);
+
+        cell33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell33);
+
+        cell34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell34);
+
+        cell35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell35);
+
+        cell36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell36);
+
+        cell37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell37);
+
+        cell38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell38);
+
+        cell39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell39);
+
+        cell40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell40);
+
+        cell41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell41);
+
+        cell42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell42);
+
+        cell43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell43);
+
+        cell44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell44);
+
+        cell45.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell45);
+
+        cell46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell46);
+
+        cell47.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell47);
+
+        cell48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell48);
+
+        cell49.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         add(cell49);
     }// </editor-fold>//GEN-END:initComponents
 
