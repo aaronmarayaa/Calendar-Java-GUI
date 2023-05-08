@@ -13,7 +13,7 @@ public class CalendarPanel extends javax.swing.JPanel {
         initComponents();
         thisMonth();
         showMonthYear();
-        displayDate.show(new DatePanel(month, year));
+        displayDate.show(new DatePanel(month, year));           
     }
    
     @SuppressWarnings("unchecked")
@@ -27,15 +27,12 @@ public class CalendarPanel extends javax.swing.JPanel {
         clock1 = new main.Clock();
 
         setBackground(new java.awt.Color(68, 68, 68));
-        setLayout(null);
 
         monthLabel.setBackground(new java.awt.Color(255, 255, 255));
         monthLabel.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         monthLabel.setForeground(new java.awt.Color(153, 153, 153));
         monthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         monthLabel.setText("Month Year ");
-        add(monthLabel);
-        monthLabel.setBounds(450, 10, 330, 42);
 
         prevButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\prev.png")); // NOI18N
         prevButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -46,8 +43,6 @@ public class CalendarPanel extends javax.swing.JPanel {
                 prevButtonActionPerformed(evt);
             }
         });
-        add(prevButton);
-        prevButton.setBounds(330, 10, 83, 42);
 
         nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\arrow-right (1).png")); // NOI18N
         nextButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -58,12 +53,48 @@ public class CalendarPanel extends javax.swing.JPanel {
                 nextButtonActionPerformed(evt);
             }
         });
-        add(nextButton);
-        nextButton.setBounds(780, 10, 76, 42);
-        add(displayDate);
-        displayDate.setBounds(330, 60, 530, 280);
-        add(clock1);
-        clock1.setBounds(0, 0, 330, 340);
+
+        javax.swing.GroupLayout displayDateLayout = new javax.swing.GroupLayout(displayDate);
+        displayDate.setLayout(displayDateLayout);
+        displayDateLayout.setHorizontalGroup(
+            displayDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 529, Short.MAX_VALUE)
+        );
+        displayDateLayout.setVerticalGroup(
+            displayDateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(clock1, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(prevButton, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                        .addGap(43, 43, 43)
+                        .addComponent(monthLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(nextButton, javax.swing.GroupLayout.DEFAULT_SIZE, 72, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(displayDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(prevButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(monthLabel)
+                    .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addComponent(displayDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(clock1, javax.swing.GroupLayout.DEFAULT_SIZE, 336, Short.MAX_VALUE)
+        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void nextButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextButtonActionPerformed
