@@ -1,6 +1,8 @@
 package main;
 
 import java.awt.Component;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class DisplayDatePanel extends javax.swing.JPanel {
     
@@ -13,7 +15,13 @@ public class DisplayDatePanel extends javax.swing.JPanel {
     public void show(Component com) {
         comShow = com;
         if(getComponentCount() == 0) {
-            comShow.setSize(getSize());
+            addComponentListener(new ComponentAdapter() {
+                @Override
+                public void componentResized(ComponentEvent ce) {
+                    comShow.setSize(getSize());
+                }
+            });
+            
             add(comShow);
             comExit = com;
         } else {
