@@ -1,6 +1,5 @@
 package main;
 
-import java.awt.Color;
 import java.awt.Image;
 import java.awt.Toolkit;
 
@@ -9,7 +8,6 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         setIconImage();
-        getContentPane().setBackground(Color.BLUE);
     }
     
     private void setIconImage(){
