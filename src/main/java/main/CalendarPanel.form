@@ -52,7 +52,7 @@
               <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               <Component id="displayDate" max="32767" attributes="0"/>
           </Group>
-          <Component id="clock1" alignment="0" pref="336" max="32767" attributes="0"/>
+          <Component id="clock1" alignment="0" pref="361" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
