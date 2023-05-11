@@ -2,17 +2,22 @@ package main;
 
 import java.awt.Image;
 import java.awt.Toolkit;
+import javax.swing.JFrame;
 
 public class Main extends javax.swing.JFrame {
     
     private final TitleBar TITLEBAR = new TitleBar(this);
+    private int currentState;
 
     public Main() {
         initComponents();
         setIconImage();
         displayTitleBar1.display(TITLEBAR);
     }
-
+    public int restoreState() {
+        currentState = TITLEBAR.getCurrentState();
+        return currentState;
+    }
     private void setIconImage(){
         Image icon = Toolkit.getDefaultToolkit().getImage("C:/Programming/Netbeans/Calendar/src/main/java/main/icon.png");
         setIconImage(icon);
@@ -24,7 +29,6 @@ public class Main extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        calendarPanel2 = new main.CalendarPanel();
         calendarPanel1 = new main.CalendarPanel();
         displayTitleBar1 = new main.DisplayTitleBar();
 
@@ -34,6 +38,11 @@ public class Main extends javax.swing.JFrame {
         setTitle("Calendar");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setUndecorated(true);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowDeiconified(java.awt.event.WindowEvent evt) {
+                formWindowDeiconified(evt);
+            }
+        });
 
         displayTitleBar1.setBackground(new java.awt.Color(68, 68, 68));
         displayTitleBar1.setOpaque(false);
@@ -67,6 +76,14 @@ public class Main extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowDeiconified(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowDeiconified
+        if (restoreState() == JFrame.MAXIMIZED_BOTH) {
+            setExtendedState(JFrame.MAXIMIZED_BOTH);
+        } else {
+            setExtendedState(JFrame.NORMAL);
+        }
+    }//GEN-LAST:event_formWindowDeiconified
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -102,7 +119,6 @@ public class Main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private main.CalendarPanel calendarPanel1;
-    private main.CalendarPanel calendarPanel2;
     private main.DisplayTitleBar displayTitleBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextPane jTextPane1;
