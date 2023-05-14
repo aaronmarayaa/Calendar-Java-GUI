@@ -5,7 +5,7 @@ import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 public class Main extends javax.swing.JFrame {
-    
+        
     private final TitleBar TITLEBAR = new TitleBar(this);
     private int currentState;
 
@@ -13,6 +13,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         setIconImage();
         displayTitleBar1.display(TITLEBAR);
+        TITLEBAR.init(Main.this);
     }
     public int restoreState() {
         currentState = TITLEBAR.getCurrentState();
@@ -37,6 +38,7 @@ public class Main extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calendar");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMinimumSize(new java.awt.Dimension(943, 463));
         setUndecorated(true);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowDeiconified(java.awt.event.WindowEvent evt) {
@@ -116,7 +118,7 @@ public class Main extends javax.swing.JFrame {
             }
         });
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private main.CalendarPanel calendarPanel1;
     private main.DisplayTitleBar displayTitleBar1;
