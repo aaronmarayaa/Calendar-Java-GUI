@@ -4,7 +4,9 @@
  */
 package main;
 
+import java.awt.Dimension;
 import java.awt.Point;
+import java.awt.Toolkit;
 import javax.swing.JFrame;
 
 public class TitleBar extends javax.swing.JPanel {
@@ -12,10 +14,18 @@ public class TitleBar extends javax.swing.JPanel {
     private int currentState;
     private Point pressed;
     private final Main MAIN;
-    
+    private ComponentResizer resize;
+
     public TitleBar(Main MAIN) {
         this.MAIN = MAIN;
         initComponents();
+    }
+    public void init(JFrame MAIN) {
+        resize = new ComponentResizer();
+        resize.setSnapSize(new Dimension(10, 10));
+        resize.setMinimumSize(new Dimension(300, 200));
+        resize.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());
+        resize.registerComponent(MAIN);
     }
     
     @SuppressWarnings("unchecked")
@@ -48,6 +58,9 @@ public class TitleBar extends javax.swing.JPanel {
             }
         });
         movableButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                movableButtonMouseClicked(evt);
+            }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 movableButtonMousePressed(evt);
             }
@@ -96,13 +109,15 @@ public class TitleBar extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(movableButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(minimizeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(exitButton, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
                     .addComponent(maximizeButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(movableButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -142,6 +157,19 @@ public class TitleBar extends javax.swing.JPanel {
             }   
         }
     }//GEN-LAST:event_maximizeButtonActionPerformed
+
+    private void movableButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_movableButtonMouseClicked
+        if (evt.getClickCount() == 2) {
+            if (MAIN.getExtendedState() == JFrame.MAXIMIZED_BOTH) {
+                MAIN.setExtendedState(JFrame.NORMAL);
+                currentState = 1;
+            } else {
+                MAIN.setExtendedState(JFrame.MAXIMIZED_BOTH);
+                currentState = 6;
+            }
+        }
+    }//GEN-LAST:event_movableButtonMouseClicked
+    
     public int getCurrentState(){
         return currentState;
     }
