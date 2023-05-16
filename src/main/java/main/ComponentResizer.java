@@ -232,9 +232,6 @@ public final class ComponentResizer extends MouseAdapter {
             if(drag > 10){
                 x -= drag;
             } 
-            System.out.println("width " + width);
-            System.out.println("x " + x);
-            System.out.println("drag: " + drag);
         }
         if (NORTH == (direction & NORTH)) {
             int drag = getDragDistance(pressed.y, current.y, snapSize.height);
