@@ -6,14 +6,28 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Calendar;
 import java.util.Date;
+import javax.swing.Timer;
 
 public class Cell extends javax.swing.JLabel{
     
     private Date date;
     private boolean title;
     private boolean isToday;
-  
+    private final Timer timer;
+    
+    public Cell(){
+        timer = new Timer(1000, e -> { 
+            updateDayMarking();
+        });
+        timer.setInitialDelay(0);
+        timer.start();  
+        repaint();
+    }
+    
     public void asTitle(){
         title = true;
     }
@@ -33,6 +47,16 @@ public class Cell extends javax.swing.JLabel{
     public void setToday(boolean isToday){
         this.isToday = isToday;
     }
+    private void updateDayMarking(){
+        LocalDate currentDate = LocalDate.now();
+    
+        if (date != null) {
+            LocalDate cellDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+            isToday = currentDate.equals(cellDate);
+            repaint();
+        }
+    }
     @Override
     protected void paintComponent(Graphics graphics){
         if(!isTitle()){
@@ -47,7 +71,7 @@ public class Cell extends javax.swing.JLabel{
             dayMarking.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
             dayMarking.setColor(new Color(25,70,255));
             dayMarking.fillRoundRect(25, 10, getWidth()-50, getHeight()-20, 50, 50);
-        }
+        } 
         super.paintComponent(graphics);
     }
 }
