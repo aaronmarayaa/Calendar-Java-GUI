@@ -32,22 +32,10 @@ public class TitleBar extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLayeredPane1 = new javax.swing.JLayeredPane();
         movableButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
         minimizeButton = new javax.swing.JButton();
         maximizeButton = new javax.swing.JButton();
-
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         setBackground(new java.awt.Color(39, 39, 39));
 
@@ -175,7 +163,6 @@ public class TitleBar extends javax.swing.JPanel {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exitButton;
-    private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JButton maximizeButton;
     private javax.swing.JButton minimizeButton;
     private javax.swing.JButton movableButton;
