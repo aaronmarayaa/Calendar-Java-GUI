@@ -39,16 +39,7 @@ public class DatePanel extends javax.swing.JPanel {
                 cell.setText(calendar.get(Calendar.DATE) + "");
                 cell.setDate(calendar.getTime());
                 cell.currentMonth(calendar.get(Calendar.MONTH) == month - 1);
-                calendar.add(Calendar.DATE, 1); 
-                
-                Calendar currentSystemDate = Calendar.getInstance();
-                if(calendar.get(Calendar.YEAR) == currentSystemDate.get(Calendar.YEAR) &&
-                    calendar.get(Calendar.MONTH) == currentSystemDate.get(Calendar.MONTH) &&
-                    calendar.get(Calendar.DATE) == currentSystemDate.get(Calendar.DATE) + 1){
-                    cell.setToday(true);
-                } else {
-                    cell.setToday(false);
-                }
+                calendar.add(Calendar.DATE, 1);
             }
         }
     }
