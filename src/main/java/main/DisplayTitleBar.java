@@ -14,17 +14,15 @@ import java.awt.event.ComponentEvent;
  */
 public class DisplayTitleBar extends javax.swing.JPanel {
     
-    private Component com;
-    
     public DisplayTitleBar() {
         initComponents();
     }
     public void display(Component com){
-        this.com = com;
         addComponentListener(new ComponentAdapter() {
                @Override
                public void componentResized(ComponentEvent ce) {
                    com.setSize(getSize());
+                   revalidate();
                }
         });
         com.setSize(getSize());
