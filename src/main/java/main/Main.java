@@ -15,10 +15,12 @@ public class Main extends javax.swing.JFrame {
         displayTitleBar1.display(TITLEBAR);
         TITLEBAR.init(Main.this);
     }
-    public int restoreState() {
+    
+    private int restoreState() {
         currentState = TITLEBAR.getCurrentState();
         return currentState;
     }
+    
     private void setIconImage(){
         Image icon = Toolkit.getDefaultToolkit().getImage("C:/Programming/Netbeans/Calendar/src/main/java/main/icon.png");
         setIconImage(icon);

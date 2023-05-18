@@ -12,6 +12,7 @@ public class DisplayDatePanel extends javax.swing.JPanel {
     public DisplayDatePanel() {
        initComponents();
     }
+    
     public void show(Component com) {
         comShow = com;
         if(getComponentCount() == 0) {
@@ -19,6 +20,7 @@ public class DisplayDatePanel extends javax.swing.JPanel {
                 @Override
                 public void componentResized(ComponentEvent ce) {
                     comShow.setSize(getSize());
+                    revalidate();
                 }
             });
             
@@ -30,6 +32,7 @@ public class DisplayDatePanel extends javax.swing.JPanel {
             removeSlide();
         }
     }
+    
     private void removeSlide(){
         remove(comExit);
         comExit = comShow;

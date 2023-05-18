@@ -118,12 +118,14 @@ public class CalendarPanel extends javax.swing.JPanel {
         displayDate.show(new DatePanel(month, year));
         showMonthYear();
     }//GEN-LAST:event_prevButtonActionPerformed
-    public final void thisMonth() {
+    
+    private void thisMonth() {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(new Date());   //  today
         month = calendar.get(Calendar.MONTH) + 1;
         year = calendar.get(Calendar.YEAR);
     }
+    
     private void showMonthYear() {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.MONTH, month - 1);
@@ -132,6 +134,7 @@ public class CalendarPanel extends javax.swing.JPanel {
         SimpleDateFormat currentMonth = new SimpleDateFormat("MMMM yyyy");
         monthLabel.setText(currentMonth.format(calendar.getTime()));
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private main.Clock clock1;
     private main.DisplayDatePanel displayDate;

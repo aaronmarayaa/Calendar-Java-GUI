@@ -20,6 +20,7 @@ public class TitleBar extends javax.swing.JPanel {
         this.MAIN = MAIN;
         initComponents();
     }
+    
     public void init(JFrame MAIN) {
         resize = new ComponentResizer();
         resize.setSnapSize(new Dimension(10, 10));
@@ -161,6 +162,7 @@ public class TitleBar extends javax.swing.JPanel {
     public int getCurrentState(){
         return currentState;
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton exitButton;
     private javax.swing.JButton maximizeButton;

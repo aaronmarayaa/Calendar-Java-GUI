@@ -16,6 +16,7 @@ public class DatePanel extends javax.swing.JPanel {
         initComponents();
         init();
     }
+    
     private void init(){
         sun.asTitle();
         mon.asTitle();
@@ -26,6 +27,7 @@ public class DatePanel extends javax.swing.JPanel {
         sat.asTitle();
         setDate();
     }
+    
     public void setDate(){
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
@@ -43,6 +45,7 @@ public class DatePanel extends javax.swing.JPanel {
             }
         }
     }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

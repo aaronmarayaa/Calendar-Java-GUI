@@ -8,7 +8,6 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.time.LocalDate;
 import java.time.ZoneId;
-import java.util.Calendar;
 import java.util.Date;
 import javax.swing.Timer;
 
@@ -31,12 +30,15 @@ public class Cell extends javax.swing.JLabel{
     public void asTitle(){
         title = true;
     }
+    
     public boolean isTitle(){
         return title;
     }
+    
     public void setDate(Date date){
         this.date = date;
     }
+    
     public void currentMonth(boolean daysOfCurrentMonth){
         if(daysOfCurrentMonth){
             setForeground(new Color(0, 0, 0));
@@ -44,9 +46,11 @@ public class Cell extends javax.swing.JLabel{
         else
             setForeground(new Color(169,169, 169));
     }
+    
     public void setToday(boolean isToday){
         this.isToday = isToday;
     }
+    
     private void updateDayMarking(){
         LocalDate currentDate = LocalDate.now();
     
@@ -57,6 +61,7 @@ public class Cell extends javax.swing.JLabel{
             repaint();
         }
     }
+    
     @Override
     protected void paintComponent(Graphics graphics){
         if(!isTitle()){

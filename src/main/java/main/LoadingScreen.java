@@ -4,22 +4,15 @@
  */
 package main;
 
-import java.awt.Image;
-import java.awt.Toolkit;
 import javax.swing.plaf.basic.BasicProgressBarUI;
 
 public class LoadingScreen extends javax.swing.JFrame {
         
     public LoadingScreen() {
         initComponents();
-        setIconImage();
         progressBar.setUI(new BasicProgressBarUI() {});
     }
-    private void setIconImage(){
-        Image icon = Toolkit.getDefaultToolkit().getImage("C:/Programming/Netbeans/Calendar/src/main/java/main/icon.png");
-        setIconImage(icon);
-    }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -94,6 +87,7 @@ public class LoadingScreen extends javax.swing.JFrame {
             new Main().setVisible(true);
         }).start();
     }//GEN-LAST:event_formWindowOpened
+    
     private void delay(int millis){
         try {
             Thread.sleep(millis);

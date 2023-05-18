@@ -17,6 +17,7 @@ public class DisplayTitleBar extends javax.swing.JPanel {
     public DisplayTitleBar() {
         initComponents();
     }
+    
     public void display(Component com){
         addComponentListener(new ComponentAdapter() {
                @Override
