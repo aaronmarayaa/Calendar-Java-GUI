@@ -1,10 +1,13 @@
 main\DisplayDatePanel$1.class
+main\Main$1.class
 main\Clock.class
-main\LoadingScreen$2.class
 main\LoadingScreen.class
+main\CalendarPanel.class
+main\Main.class
+main\DatePanel.class
+main\LoadingScreen$2.class
 main\LoadingScreen$1.class
 main\CalendarPanel$1.class
 main\Cell.class
 main\DisplayDatePanel.class
 main\CalendarPanel$2.class
-main\CalendarPanel.class
