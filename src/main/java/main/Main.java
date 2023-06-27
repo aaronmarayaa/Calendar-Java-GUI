@@ -16,7 +16,7 @@ public class Main extends javax.swing.JFrame {
     }
 
     private void setIconImage(){
-        Image icon = Toolkit.getDefaultToolkit().getImage("C:/Programming/Netbeans/Calendar/src/main/java/main/icon.png");
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:\\Programming\\Netbeans\\Calendar\\images\\icon.png");
         setIconImage(icon);
     }
     

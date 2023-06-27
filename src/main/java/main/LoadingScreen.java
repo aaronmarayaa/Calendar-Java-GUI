@@ -37,7 +37,7 @@ public class LoadingScreen extends javax.swing.JFrame {
 
         progressBar.setForeground(new java.awt.Color(102, 102, 102));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Downloads\\calendarIcon-removebg-preview.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Programming\\Netbeans\\Calendar\\images\\calendarLoading.png")); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

@@ -88,7 +88,7 @@
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Admin\Downloads\calendarIcon-removebg-preview.png"/>
+              <Image iconType="2" name="C:\Programming\Netbeans\Calendar\images\calendarLoading.png"/>
             </Property>
           </Properties>
         </Component>

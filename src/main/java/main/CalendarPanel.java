@@ -34,7 +34,7 @@ public class CalendarPanel extends javax.swing.JPanel {
         monthLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         monthLabel.setText("Month Year ");
 
-        prevButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\prev.png")); // NOI18N
+        prevButton.setIcon(new javax.swing.ImageIcon("C:\\Programming\\Netbeans\\Calendar\\images\\arrow-left.png")); // NOI18N
         prevButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         prevButton.setContentAreaFilled(false);
         prevButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -44,7 +44,7 @@ public class CalendarPanel extends javax.swing.JPanel {
             }
         });
 
-        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Admin\\Pictures\\arrow-right (1).png")); // NOI18N
+        nextButton.setIcon(new javax.swing.ImageIcon("C:\\Programming\\Netbeans\\Calendar\\images\\arrow-right.png")); // NOI18N
         nextButton.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         nextButton.setContentAreaFilled(false);
         nextButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
